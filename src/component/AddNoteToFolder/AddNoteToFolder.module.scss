@@ -1,0 +1,33 @@
+.btn{
+    width: 100%;
+    // background: #639FFF;
+    display: flex;
+    align-items: center;
+    &__color{
+        color:#fff;
+        padding-left:1rem;
+    }
+    &__top{
+        margin-top:2rem;
+    }
+    &_inner{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+}
+
+.popup{
+    padding:2rem;
+    left:30rem;
+    top:0;
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    background: #fff;
+    box-shadow: 0 2px 5px #777;
+
+}
+

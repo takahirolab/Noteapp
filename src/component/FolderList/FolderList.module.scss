@@ -1,0 +1,53 @@
+.folderList{
+    padding:0.5rem 0rem;
+    display: flex;
+    align-items: center;
+    &_inner{
+
+        margin-top:0.8rem
+    }
+    &:hover{
+        background:#93918F70;
+    }
+    &_h2{
+        font-size: 1.4rem;
+        color: #fff;
+        padding-left:1rem;
+    }
+    &_padding{
+        padding-left:2rem;
+    }
+}
+
+.folder{
+    padding-left: 3rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.popup{
+    z-index:10;
+    border-radius: 8px;
+    padding: 2rem;
+    left: 20rem;
+    top: 0;
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 2px 5px #777;
+    &_inner {
+        padding: 0.6rem 0rem;
+        display: flex;
+        align-items: center;
+        }
+        &_iconPadding{
+            margin-right: 1rem;;
+        }
+}.Note{
+    padding-left:6rem;
+}
+
+

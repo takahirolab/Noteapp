@@ -1,0 +1,74 @@
+.folderList {
+  padding: 0.5rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.folderList_inner {
+  margin-top: 0.8rem;
+}
+
+.folderList:hover {
+  background: #93918F70;
+}
+
+.folderList_h2 {
+  font-size: 1.4rem;
+  color: #fff;
+  padding-left: 1rem;
+}
+
+.folderList_padding {
+  padding-left: 2rem;
+}
+
+.folder {
+  padding-left: 3rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popup {
+  z-index: 10;
+  border-radius: 8px;
+  padding: 2rem;
+  left: 20rem;
+  top: 0;
+  position: absolute;
+  width: 21rem;
+  height: auto;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 5px #777;
+          box-shadow: 0 2px 5px #777;
+}
+
+.popup_inner {
+  padding: 0.6rem 0rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.popup_iconPadding {
+  margin-right: 1rem;
+}
+
+.Note {
+  padding-left: 6rem;
+}
+/*# sourceMappingURL=FolderList.module.css.map */

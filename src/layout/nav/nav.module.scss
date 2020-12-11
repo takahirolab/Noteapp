@@ -1,0 +1,25 @@
+
+.nav{
+    position:fixed;
+    top:0;
+    width: 100%;
+    height: 65px;
+    background:#fff;
+    border-bottom:1px solid #777;
+    &_inner{
+        height: 100%;
+        margin:0 auto;
+        padding:0 7rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &_profile{
+       display: flex;
+       align-items: center;
+      }
+      &_p{
+        padding-left:2rem;
+      }
+
+}

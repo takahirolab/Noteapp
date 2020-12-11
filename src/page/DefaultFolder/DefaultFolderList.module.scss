@@ -1,0 +1,26 @@
+.Table{
+    width: 100%;
+}
+
+.TableName{
+    padding:0rem 3rem;
+    display: flex;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background: #93918F;
+    border-radius: 8px 8px 0px 0px;
+    &_p{
+        color: #fff;
+        min-width:20rem;
+    }
+    &__tr{
+        background: #fff;
+        border-radius: unset;
+    }
+    &__tr:hover{
+        background: #151b2610;
+    }&__color{
+        color:#151b26
+    }
+}

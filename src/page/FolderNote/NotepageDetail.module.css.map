@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,QAAQ,CAAA;EACJ,OAAO,EAAC,IAAI;CAKf;;AAJI,AAAD,UAAG,CAAA;EACC,UAAU,EAAC,IAAI;CAElB",
+    "sources": [
+        "NotepageDetail.module.scss"
+    ],
+    "names": [],
+    "file": "NotepageDetail.module.css"
+}

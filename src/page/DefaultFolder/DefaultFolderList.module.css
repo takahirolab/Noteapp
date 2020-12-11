@@ -1,0 +1,36 @@
+.Table {
+  width: 100%;
+}
+
+.TableName {
+  padding: 0rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 4rem;
+  width: 100%;
+  background: #93918F;
+  border-radius: 8px 8px 0px 0px;
+}
+
+.TableName_p {
+  color: #fff;
+  min-width: 20rem;
+}
+
+.TableName__tr {
+  background: #fff;
+  border-radius: unset;
+}
+
+.TableName__tr:hover {
+  background: #151b2610;
+}
+
+.TableName__color {
+  color: #151b26;
+}
+/*# sourceMappingURL=DefaultFolderList.module.css.map */

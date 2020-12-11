@@ -1,0 +1,12 @@
+.content{
+    width: calc(100% - 30rem);
+    background:#F5F8F9;
+    padding:5rem 5rem;
+    &_inner{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background: #fff;
+        box-shadow: 0 1px 4px 0 rgba(21,27,38,.08);
+    }
+}
