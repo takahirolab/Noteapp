@@ -9,8 +9,12 @@ export function FolderPage(props) {
 
     return (
         <Layout>
- {!props.data.MainFolder ? history.push('/'):
-                    <FolderPageDetail noteid={noteid} />}
+            {props.data.MainFolder.map(item =>
+                item.id === noteid ?
+                    item.Notefolder.length > 0 ?
+                        <FolderPageDetail noteid={noteid} /> : <h1>データがありません。</h1>:''
+            )}
+
         </Layout>
     )
 }

@@ -2,13 +2,11 @@ import React from 'react'
 import Layout from '../layout/Layout'
 import DefaultFolderList from './DefaultFolder/DefaultFolderList'
 import { connect } from 'react-redux';
-import history from '../util/history/history'
-import { withRouter } from 'react-router';
 
 export function  DefaultFolder (props) {
     return (
         <Layout>
-             <DefaultFolderList />
+            {props.data.MainFolder.length > 0?<DefaultFolderList />:<h1>データがありません。</h1>}
         </Layout>
     )
 }
