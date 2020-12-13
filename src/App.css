@@ -18,9 +18,49 @@ a,p, h2, h1,li {
 }
 
 a,p,th,tr {font-size: 1.5rem; }
-h2 {font-size: 1.8rem;}
+h2,button {font-size: 1.8rem;}
 h1 {font-size: 4.8rem;}
 
 li {font-size: 1.5rem;list-style: none;}
 
+input::placeholder {
+  color: #b4b4b4;
+}
+
+input[type="text"] {
+  font-size: 4rem;
+  padding: 2rem;
+  border: none;
+  border-radius: 0;
+  outline: none;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+textarea[type="textarea"] {
+    font-size: 1.6rem;
+    padding: 2rem;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none; }
+    input:focus {
+      box-shadow: none;
+      outline: none;}
+
+      input{
+        padding:0.4rem 0.8rem;
+        border-radius: 8px;
+        margin-right: 1.2rem;
+          margin-bottom: 1.2rem;
+
+          width: 100%;
+          border-radius: 1.5rem;
+
+          background: #E8E8E8;
+          text-align: left;
+          display: flex;
+          justify-content: start;
+          align-items: center;
+          margin-bottom: 1.6rem;
+      }
 

@@ -3,12 +3,12 @@
 }
 
 .TableName{
-    padding:0rem 3rem;
+    padding: 0.4rem 3rem;
     display: flex;
     align-items: center;
-    height: 4rem;
+    min-height: 4rem;
     width: 100%;
-    background: #93918F;
+    background: #151b26eb;
     border-radius: 8px 8px 0px 0px;
     &_p{
         color: #fff;

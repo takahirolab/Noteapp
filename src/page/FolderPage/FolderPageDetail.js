@@ -20,7 +20,7 @@ export class FolderPage extends Component {
         const test = Folder.map((folder) =>
             folder.id === folderid ?
                 folder.Notefolder.map((note) =>
-                    <Link to={{ pathname: `/mainfolder/0/${note.id}` }}>
+                    <Link to={{ pathname: `/mainfolder/folder?${folder.title}/${note.id}` }}>
                         <tr className={style.TableName + ' ' + style.TableName__tr}>
                             <p className={style.TableName_p + ' ' + style.TableName__color}>{note.id}</p>
                             <p className={style.TableName_p + ' ' + style.TableName__color}>{note.title}</p>

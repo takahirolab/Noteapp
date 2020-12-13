@@ -3,15 +3,14 @@ import {
     DELFOLDER,
     ADDNOTE,
     UPDATEFOLDER,
-    GETNOTE
+    GETNOTE,
+    UPDATENOTE,
+    FOLDERNOTEUPDATE
 
   } from '../types';
 
   const initialState = {
-    MainFolder:[],
-    getNote:[],
-    folder3:[],
-    folder4:[],
+    MainFolder:[]
   };
 
   export default function(state = initialState, action) {
@@ -22,20 +21,32 @@ import {
                 MainFolder: state.MainFolder.concat(action.payload)
             }
 
-
-        // case GETNOTE:
-        //     let index = state.MainFolder.findIndex(
-        //         (folder) => folder.id === action.payload.id)
-        //     state.MainFolder[index] = action.payload;
-        //     return {
-        //         ...state,
-        //         getNote:state.MainFolder
-        //     }
-
         case UPDATEFOLDER:
             let index = state.MainFolder.findIndex(
                 (folder) => folder.id === action.payload)
             state.MainFolder[index] = action.payload;
+            return {
+               ...state,
+            }
+
+        case UPDATENOTE:
+            let Noteno = state.MainFolder.findIndex(
+                (folder) => folder.id === action.payload.id)
+            state.MainFolder[Noteno] = action.payload;
+            return {
+               ...state,
+            }
+
+        case FOLDERNOTEUPDATE:
+            let FolderNote = state.MainFolder.findIndex(
+                (folder) => folder.id === action.payload.FolderId)
+
+            // let Note = state.MainFolder[FolderNote].findIndex(
+            //     (note) => note.id === action.payload.FolderId)
+
+            state.MainFolder[FolderNote] = action.payload;
+                // state.MainFolder[FolderNote].Notefolder[Note]= action.payload;
+
             return {
                ...state,
             }

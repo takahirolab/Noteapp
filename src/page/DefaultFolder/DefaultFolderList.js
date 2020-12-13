@@ -14,7 +14,7 @@ export class DefaultFolderList extends Component {
         const Folders = this.props.data.MainFolder
         const NoteItemList = !Folders?'':Folders.map(folder =>
             <>
-                <Link to={folder.file?{ pathname:`/mainfolder/${folder.id}` }:{ pathname:`/mainfolder/${folder.id}` }}>
+                <Link to={folder.file?{ pathname:`/mainfolder/${folder.id}` }:{ pathname:`/mainfolder/0/${folder.id}` }}>
                 <tr className={style.TableName + ' ' + style.TableName__tr}>
                     <p　className={style.TableName_p+ ' '+style.TableName__color}>{folder.id}</p>
                     <p　className={style.TableName_p+ ' '+style.TableName__color}>{folder.title}</p>

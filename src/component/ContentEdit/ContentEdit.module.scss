@@ -1,0 +1,17 @@
+.btn{
+    position:absolute;
+    bottom:3rem;
+    left:50%;
+    -webkit-transform: translate(50%,0%);
+   transform: translate(-50%, -50%);
+    width: 20rem;
+    background: #52BF90;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    opacity: 1;
+    color: #fff;
+    text-align: center;
+    &:hover{
+    opacity: 0.8;
+    }
+}

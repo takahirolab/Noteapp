@@ -1,0 +1,30 @@
+.content{
+    padding:2rem;
+    &_p{
+        margin-top:2rem;
+    }
+}
+
+.inputTitle{
+    background:#f5f5f5;
+}
+.description{
+    font-size: 1.6rem;
+    width: 100%;
+    border: 1px solid #9f9f9f;
+    min-height: 30rem;
+}
+.editbtton{
+    display: flex;
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.Btn{
+margin:0rem 1rem;
+ width:20rem;
+ padding: 1rem 2rem;
+border-radius: 20px;
+border:none;
+}

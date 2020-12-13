@@ -50,8 +50,7 @@ export class FolderList extends Component {
         const addNoteFolder = []
             this.props.data.MainFolder.map(MainFolder =>
                 MainFolder.id === this.state.AddFolderNo ? addNoteFolder.push(MainFolder) : '')
-                addNoteFolder[0].Notefolder.push({ id:value, title: 'ノート',description:'サンプルテキストです。よろしくお願いします。', file: true})
-        console.log(addNoteFolder)
+        addNoteFolder[0].Notefolder.push({ id: value, title: 'ノート', description: 'サンプルテキストです。よろしくお願いします。', file: true, FolderId:''})
         this.props.UpdateFolder(addNoteFolder);
         this.setState({ CreateSelect:false})
     }
