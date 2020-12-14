@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import style from './ContentEdit.module.css'
+import { withRouter } from 'react-router';
 
 export class ContentEdit extends Component {
     constructor(props) {
@@ -20,4 +21,4 @@ export class ContentEdit extends Component {
 }
 
 
-export default ContentEdit
+export default (withRouter (ContentEdit))

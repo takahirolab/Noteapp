@@ -15,7 +15,7 @@ const toolbar = [
     'side-by-side',
     'fullscreen',
     '|',
-    'guide',
+    'guide'
 ]
 
 

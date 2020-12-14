@@ -19,7 +19,6 @@ export function FolderPage(props) {
                 // ノートが存在しない場合　データないことを明示
                 <Contentcontainer><h2>データがありません。</h2> </Contentcontainer> : ''
             )}
-
         </Layout>
     )
 }

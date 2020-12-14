@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import history from '../util/history/history'
 //レイアウト
 import Layout from '../layout/Layout'
 //コンポーネント
@@ -21,6 +22,8 @@ export class NotePage extends Component {
         this.state.Edit ?this.setState({ Edit: false }):this.setState({ Edit: true })
     }
 
+    componentDidMount
+
 
     render() {
         //ノートIDを取得
@@ -37,7 +40,7 @@ export class NotePage extends Component {
                      {/* ノートの表示　データ表示画面　AND 編集画面 */}
                     <NotepageDetail NoteData={NoteData[0]} Edit={this.state.Edit} ContentEditAction={() => { this.ContentEditAction(); }} />
                     {/* 編集ボタンの表示切り替え */}
-                    {this.state.Edit ? '' : <ContentEdit ContentEditAction={() => { this.ContentEditAction(); }} />}
+                    { !NoteData? '':this.state.Edit ? '' : <ContentEdit ContentEditAction={() => { this.ContentEditAction(); }} />}
                 </Layout>
 
             </>

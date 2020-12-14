@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { withRouter } from 'react-router';
 //レイアウト
 import Layout from '../layout/Layout'
 //コンポーネント
 import FolderNoteDetail from './FolderNote/FolderNoteDetail'
 import ContentEdit from '../component/ContentEdit/ContentEdit'
 //Redux
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 
 
 
@@ -54,4 +55,4 @@ const mapStateToProps =(state) => ({
 })
 
 
-export default connect(mapStateToProps)(FolderNote);
+export default connect(mapStateToProps)(withRouter(FolderNote));

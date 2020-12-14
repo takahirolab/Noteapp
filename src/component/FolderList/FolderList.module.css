@@ -9,6 +9,9 @@
   overflow: hidden;
 }
 
+.folderList_inner {
+  margin-top: 0.8rem;
+}
 
 .folderList_h2 {
   font-size: 1.4rem;
@@ -25,7 +28,6 @@
 
 .folder {
   padding-left: 3rem;
-  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,7 +48,7 @@
   border-radius: 8px;
   padding: 2rem;
   left: 20rem;
-  top: 0;
+  top: auto;
   position: absolute;
   width: 21rem;
   height: auto;

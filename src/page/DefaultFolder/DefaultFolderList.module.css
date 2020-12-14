@@ -32,5 +32,12 @@
 
 .TableName__color {
   color: #151b26;
+  max-height: 9rem;
+  overflow-y: overlay;
+}
+
+.TableName__description {
+  max-height: 9rem;
+  overflow-y: overlay;
 }
 /*# sourceMappingURL=DefaultFolderList.module.css.map */

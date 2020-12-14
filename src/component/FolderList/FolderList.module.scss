@@ -27,7 +27,7 @@
 
 .folder{
     padding-left: 3rem;
-    position: relative;
+    // position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -41,7 +41,7 @@
     border-radius: 8px;
     padding: 2rem;
     left: 20rem;
-    top: 0;
+    top: auto;
     position: absolute;
     width: 21rem;
     height: auto;

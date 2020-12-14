@@ -21,6 +21,12 @@
     &__tr:hover{
         background: #151b2610;
     }&__color{
-        color:#151b26
+        color:#151b26;
+        max-height: 9rem;
+        overflow-y: overlay;
+    } &__description{
+        max-height: 9rem;
+        overflow-y: overlay;
     }
+
 }

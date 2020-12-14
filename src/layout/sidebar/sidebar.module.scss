@@ -2,5 +2,11 @@
     padding:3rem;
     width: 30rem;
     height:100vh;
-    background:#151b26
+    background:#151b26;
+    overflow: scroll;
+    &:-webkit-scrollbar {
+        display: none;
+      }
 }
+
+

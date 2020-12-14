@@ -30,7 +30,7 @@ export class FolderPage extends Component {
                         <tr className={style.TableName + ' ' + style.TableName__tr}>
                             <p className={style.TableName_p + ' ' + style.TableName__color}>{note.id}</p>
                             <p className={style.TableName_p + ' ' + style.TableName__color}>{note.title}</p>
-                            <p className={style.TableName_p + ' ' + style.TableName__color}>{note.description}</p>
+                            <p className={style.TableName_p + ' ' + style.TableName__color +' '+style.TableName__description}>{note.description}</p>
                         </tr>
                     </Link>
                 ):''
