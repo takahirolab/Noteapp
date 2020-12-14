@@ -1,3 +1,41 @@
+# 課題内容：NoteAPP
+今回NCDC様の課題より作成を行ったアプリケーションとなります。サイドバーメニューは三階層となっており、フォルダー及びノートを作成・編集することが可能です。またmarkdownにいついても実装済み。
+ 
+
+## 使い方
+1.サイドバーに表示されている「メインフォルダ」のプラスボタンよりノートもしくはフォルダを押下。
+2.ノートを作成した場合、新たに作成されたノートタブより情報の編集。フォルダを作成した場合、プラスボタンより第三階層にノートを作成が可能。
+
+
+## 環境
+制作にあたりReact.jsを使用
+（フレームワーク：React-Redux,React-hook)
+
+ ├──@material-ui/core@4.11.2
+├── @material-ui/icons@4.11.
+├── react@17.0.1
+├── react-dom@17.0.1
+├── marked@1.2.6
+├── material-ui@0.20.2
+├── node-sass@5.0.0
+├──react-redux@7.2.2
+├── react-router-dom@5.2.0
+├── react-scripts@4.0.1
+├── react-simplemde-editor@4.1.3
+├── redux@4.0.5
+├── redux-thunk@2.3.0
+└── web-vitals@0.2.4
+ 
+# Author
+* 製作者：新井貴大
+* E-mail：takahiro.arai0323@gmail.com
+ 
+
+
+
+
+# 操作手順
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
