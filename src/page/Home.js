@@ -4,11 +4,14 @@ import React from 'react'
 import Layout from '../layout/Layout'
 import Contentcontainer from '../layout/ContentContainer/container'
 
+import AddBtn from '../component/AddButton/AddButton'
+
 function Home (props) {
     return (
         <Layout>
             <Contentcontainer>
-            <h2>ようこそ</h2>
+                <h1>ようこそ</h1>
+                <AddBtn/>
             </Contentcontainer>
         </Layout>
     )
