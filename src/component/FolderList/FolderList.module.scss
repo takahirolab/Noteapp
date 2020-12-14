@@ -3,13 +3,15 @@
     display: flex;
     align-items: center;
     overflow: hidden;
+    // &:hover{
+    //     background:#93918F70;
+    // }
     &_inner{
 
         margin-top:0.8rem
+
     }
-    &:hover{
-        background:#93918F70;
-    }
+
     &_h2{
         font-size: 1.4rem;
         color: #fff;
@@ -29,6 +31,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    &:hover{
+        background:#93918F70;
+    }
 }
 
 .popup{
@@ -52,6 +57,9 @@
         }
 }.Note{
     padding-left:6rem;
+    &:hover{
+        background:#93918F70;
+    }
 }
 
 

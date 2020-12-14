@@ -1,12 +1,23 @@
 
-import React, { Component } from 'react'
+import React, { Component,useState }  from 'react'
 import { withRouter } from 'react-router';
-import { connect } from 'react-redux';
 import history from '.././../util/history/history'
+//レイアウト
 import ContentContainer from '../../layout/ContentContainer/container'
+//スタイル
 import style from './NotepageDetail.module.css'
-import { NoteDataUpdate } from '../../redux/actions/AppAction';
-import { Link } from 'react-router-dom';
+
+//コンポーネント
+import Markdown from '../../util/Markdown'
+
+//redux
+import { UpdateNote } from '../../redux/actions/AppAction';
+import { connect } from 'react-redux';
+
+//マークダウン
+import marked from "marked";
+
+
 
 export class NotepageDetail extends Component {
     constructor(props) {
@@ -15,34 +26,46 @@ export class NotepageDetail extends Component {
             title: this.props.NoteData ? this.props.NoteData.title : '',
             description: this.props.NoteData ? this.props.NoteData.description : '',
             id: this.props.NoteData ? this.props.NoteData.id : '',
+            markdown:this.props.NoteData ? this.props.NoteData.description : '',
         }
         this.handleSubmit = this.handleSubmit.bind(this)
     }
 
+    // 入力欄への文字入力/stateの更新
     handleChange = (event) =>{
-        this.setState({
-            [event.target.name]: event.target.value
-        })
+        this.setState({ [event.target.name]: event.target.value })
     }
 
+     // 入力欄への文字入力/stateの更新  マークダウン
+    MarkdownChange(value) {
+    console.log(value)
+    this.setState({ markdown:value })
+    }
+
+     //キャンセルボタンを押下
     CancelInput() {
+          //入力値を入力する前にリセット
         this.setState({
             title: this.props.NoteData ? this.props.NoteData.title : '',
             description: this.props.NoteData ? this.props.NoteData.description : '',
             id: this.props.NoteData ? this.props.NoteData.id : '',
+            markdown:this.props.NoteData ? this.props.NoteData.description : '',
         })
+        //編集画面を終了・ノートデータの表示ページへ
         this.props.ContentEditAction();
     }
 
+    //入力内容の更新
     handleSubmit(event) {
         const NoteSubmitData = {
             id: this.props.NoteData.id,
             title: this.state.title,
-            description: this.state.description,
+            description: this.state.markdown,
             file:this.props.NoteData.file
         };
-        console.log(NoteSubmitData)
-        this.props.NoteDataUpdate(NoteSubmitData);
+        //Reduxへ更新
+        this.props.UpdateNote(NoteSubmitData);
+        //編集画面を終了・ノートデータの表示ページへ
         this.props.ContentEditAction();
         alert('データが更新されました');
         event.preventDefault();
@@ -50,11 +73,13 @@ export class NotepageDetail extends Component {
 
 
     render() {
+
         const Edit = this.props.Edit
+         // フォルダデータ取得(ノート全てあり)
         const NoteData =  this.props.NoteData
         const Notestyle =
-            !NoteData? '':
-            <><h1>{NoteData.title}</h1><p className={style.content_p}>{NoteData.description}</p></>
+            !NoteData ? '' :  // フォルダデータの中にノートがあるかどうかを検知
+                <><h1>{NoteData.title}</h1><span className={style.content_p} dangerouslySetInnerHTML={{ __html: marked(NoteData.description)}}/></>
 
         return (
             <>
@@ -62,7 +87,7 @@ export class NotepageDetail extends Component {
                     {Edit ?
                         <>
                             <input type="text" className={style.inputTitle} name="title" label="title" wrap="soft"onChange={this.handleChange} value={this.state.title} />
-                            <textarea   wrap="soft"　className={style.description} name="description" label="description" onChange={this.handleChange} value={this.state.description} />
+                            <Markdown MarkdownChange={(value) => { this.MarkdownChange(value); }} description={this.props.NoteData ? this.props.NoteData.description : ''}/>
 
                         <div className={style.editbtton}>
                             <button className={style.Btn} onClick={() => { this.CancelInput() }}>キャンセル</button>
@@ -78,11 +103,9 @@ export class NotepageDetail extends Component {
 
 
 
-
+//redux
 const mapStateToProps =(state) => ({
     data:state.data
 })
-
-
-export default connect(mapStateToProps,{NoteDataUpdate})(withRouter(NotepageDetail));
+export default connect(mapStateToProps,{UpdateNote})(withRouter(NotepageDetail));
 

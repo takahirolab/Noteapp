@@ -17,7 +17,6 @@ export class AddNoteToFolder extends Component {
     }
 
     CreateNoteBtn() {
-        console.log(this.props.FolderNo)
         this.props.AddNoteToFolder(this.props.FolderNo);
         this.OpenSelect();
     }

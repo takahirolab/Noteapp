@@ -1,17 +1,23 @@
-import { connect } from 'react-redux';
 import React, { Component } from 'react'
-import style from './DefaultFolderList.module.css'
 import { Link } from 'react-router-dom';
-import L_DefaultFolderList from '../../layout/Table/l_DefaultFolderList'
 import { withRouter } from 'react-router';
 import history from '.././../util/history/history'
+//スタイル
+import style from './DefaultFolderList.module.css'
+//レイアウト
+import L_DefaultFolderList from '../../layout/Table/l_DefaultFolderList'
+//redux
+import { connect } from 'react-redux';
 
 export class DefaultFolderList extends Component {
     constructor(props) {
     super(props)
 }
     render() {
+         //登録されているフォルダー/ノート全件取得
         const Folders = this.props.data.MainFolder
+         //登録されているフォルダー/ノートの行列作成
+
         const NoteItemList = !Folders?'':Folders.map(folder =>
             <>
                 <Link to={folder.file?{ pathname:`/mainfolder/${folder.id}` }:{ pathname:`/mainfolder/0/${folder.id}` }}>
@@ -22,9 +28,13 @@ export class DefaultFolderList extends Component {
                 </tr>
                 </Link>
             </>
-                )
+        )
+
         return (
-            <>   {NoteItemList.length === 0 ? history.push('/') :
+
+            <> {/* ノートがない場合はホームへ &&更新をかけた場合*/}
+                {NoteItemList.length === 0 ? history.push('/') :
+               //* テーブルリストの表示
                 <L_DefaultFolderList>
                     {NoteItemList}
                 </L_DefaultFolderList>
@@ -35,9 +45,8 @@ export class DefaultFolderList extends Component {
 }
 
 
+//Redux
 const mapStateToProps =(state) => ({
     data:state.data
 })
-
-
 export default connect(mapStateToProps)(withRouter(DefaultFolderList));

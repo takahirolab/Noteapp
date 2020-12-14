@@ -1,33 +1,27 @@
 import {
-    ADDFOLDER,
-    DELFOLDER,
-    ADDNOTE,
-    UPDATEFOLDER,
-    GETNOTE,
-  UPDATENOTE,
-    C
+  ADD_FOLDERANDNOTE,
+  ADD_NOTE,
+  UPDATE_NOTE,
+  UPDATE_NOTEINFOLDER
   } from '../types';
 
 
-export const AddFolderOne = (folderitem) => (dispatch) => {
-    console.log(folderitem)
-    dispatch({ type: ADDFOLDER,payload:folderitem });
+  // 第二階層にフォルダーもしくはノートを追加
+export const AddFolderAndNote = (folderitem) => (dispatch) => {
+    dispatch({ type: ADD_FOLDERANDNOTE,payload:folderitem });
 }
 
-export const UpdateFolder = (folderitem) => (dispatch) => {
-    console.log(folderitem)
-    dispatch({ type:UPDATEFOLDER,payload:folderitem});
+// 第三階層にノートを追加
+export const AddNoteInFolder = (folderitem) => (dispatch) => {
+    dispatch({ type:ADD_NOTE,payload:folderitem});
   }
-export const getNote = (noteid) => (dispatch) => {
-    console.log(noteid)
-    dispatch({ type:GETNOTE,payload:noteid});
+
+// 第二階層のノートデータを更新
+export const UpdateNote = (notedata) => (dispatch) => {
+    dispatch({ type:UPDATE_NOTE,payload:notedata});
 }
 
-export const NoteDataUpdate = (notedata) => (dispatch) => {
-    console.log(notedata)
-    dispatch({ type:UPDATENOTE,payload:notedata});
-  }
-export const FolderNoteDataUpdate = (notedata) => (dispatch) => {
-    console.log(notedata)
-    dispatch({ type:UPDATENOTE,payload:notedata});
+// 第三階層のノートデータを更新
+export const UpdateNoteInFolder = (notedata) => (dispatch) => {
+    dispatch({ type: UPDATE_NOTEINFOLDER,payload:notedata});
   }

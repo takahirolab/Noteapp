@@ -18,6 +18,7 @@
 }
 
 .btn_inner {
+  padding: 0.6rem 0rem 0.6rem 0rem;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -28,6 +29,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.btn_inner:hover {
+  background: #93918F70;
 }
 
 .popup {

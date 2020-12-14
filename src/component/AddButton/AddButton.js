@@ -37,10 +37,10 @@ export class AddButton extends Component {
     render() {
         return (
             <div className={style.btn_inner + ' ' + style.btn__top}>
-                <div className={style.btn}>
+                <Link to='/mainfolder' className={style.btn}>
                     <FolderIcon style={{ color: '#fff', fontSize: 24 }} />
-                    <Link to='/mainfolder' className={style.btn__color}>メインメニュー</Link>
-                </div>
+                    <p className={style.btn__color}>メインフォルダ</p>
+                </Link>
                 <AddIcon style={{ color: '#fff', fontSize: 24 }} onClick={this.OpenSelect} />
 
                 {!this.state.FolderCreate ? '' :

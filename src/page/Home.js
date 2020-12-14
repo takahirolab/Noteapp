@@ -1,4 +1,6 @@
 import React from 'react'
+
+//レイアウト
 import Layout from '../layout/Layout'
 import Contentcontainer from '../layout/ContentContainer/container'
 

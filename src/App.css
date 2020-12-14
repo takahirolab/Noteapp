@@ -16,12 +16,13 @@ a,p, h2, h1,li {
  }
 #root{background: #fff;
 }
+a:hover{text-decoration: none;}
 
 a,p,th,tr {font-size: 1.5rem; }
 h2,button {font-size: 1.8rem;}
 h1 {font-size: 4.8rem;}
 
-li {font-size: 1.5rem;list-style: none;}
+li {font-size: 1.5rem}
 
 input::placeholder {
   color: #b4b4b4;

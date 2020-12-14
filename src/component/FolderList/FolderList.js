@@ -3,12 +3,10 @@ import React, { Component } from 'react'
 import AddButton from '../AddButton/AddButton'
 import FolderIcon from '@material-ui/icons/Folder';
 import style from './FolderList.module.css'
-import { AddFolderOne } from '../../redux/actions/AppAction'
-import { UpdateFolder } from '../../redux/actions/AppAction'
+import { AddFolderAndNote } from '../../redux/actions/AppAction'
+import { AddNoteInFolder } from '../../redux/actions/AppAction'
 import { connect } from 'react-redux';
-import AddRoundedIcon from '@material-ui/icons/AddRounded';
 import DescriptionIcon from '@material-ui/icons/Description';
-import AddNoteToFolder from '../AddNoteToFolder/AddNoteToFolder'
 import AddIcon from '@material-ui/icons/Add';
 import { Link } from 'react-router-dom';
 import {CreateId } from '../../util/CreateId'
@@ -32,15 +30,15 @@ export class FolderList extends Component {
         const value = CreateId();
         const CreateNote= []
         CreateNote.push({ id:value,title: 'ノート',description:'サンプルテキストです。よろしくお願いします。',file:true})
-        this.props.AddFolderOne(CreateNote);
+        this.props.AddFolderAndNote(CreateNote);
     }
 
     // 第二階層フォルダ作成
     createFolder() {
         const value = CreateId();
         const Createfolder= []
-        Createfolder.push({ id:value,title: 'フォルダー',file:false,Notefolder:[]})
-        this.props.AddFolderOne(Createfolder);
+        Createfolder.push({ id:value,title: 'フォルダ',file:false,Notefolder:[]})
+        this.props.AddFolderAndNote(Createfolder);
     }
 
 
@@ -51,7 +49,7 @@ export class FolderList extends Component {
             this.props.data.MainFolder.map(MainFolder =>
                 MainFolder.id === this.state.AddFolderNo ? addNoteFolder.push(MainFolder) : '')
         addNoteFolder[0].Notefolder.push({ id: value, title: 'ノート', description: 'サンプルテキストです。よろしくお願いします。', file: true, FolderId:''})
-        this.props.UpdateFolder(addNoteFolder);
+        this.props.AddNoteInFolder(addNoteFolder);
         this.setState({ CreateSelect:false})
     }
 
@@ -87,7 +85,7 @@ export class FolderList extends Component {
                 {/* // もしノートがある場合 */}
                 {folder.Notefolder ?
                     folder.Notefolder.map((noteitem) =>
-                        <Link to={{ pathname: `/mainfolder/folder?${folder.title}/${noteitem.id}` }}  className={style.folderList + ' ' + style.Note} key={noteitem.id}>
+                        <Link to={{ pathname: `/mainfolder/folder?${folder.id}/${noteitem.id}` }}  className={style.folderList + ' ' + style.Note} key={noteitem.id}>
                             <DescriptionIcon style={{ color: '#fff', fontSize: 24 }} />
                             <p className={style.folderList_h2}>{noteitem.title}</p>
                         </Link>
@@ -114,10 +112,10 @@ export class FolderList extends Component {
                 <AddButton
                     createNote={() => { this.createNote(); }}
                     createFolder={() => { this.createFolder(); }} />
-                <div className={style.folderList_inner}>
+
                     {folderList}
                     {noteList}
-                </div>
+
             </>
         )
     }
@@ -128,4 +126,4 @@ const mapStateToProps =(state) => ({
     data:state.data
   })
 
-  export default connect(mapStateToProps,{AddFolderOne,UpdateFolder})(FolderList);
+  export default connect(mapStateToProps,{AddFolderAndNote,AddNoteInFolder})(FolderList);

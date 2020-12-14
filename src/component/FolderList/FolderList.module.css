@@ -9,13 +9,6 @@
   overflow: hidden;
 }
 
-.folderList_inner {
-  margin-top: 0.8rem;
-}
-
-.folderList:hover {
-  background: #93918F70;
-}
 
 .folderList_h2 {
   font-size: 1.4rem;
@@ -42,6 +35,10 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.folder:hover {
+  background: #93918F70;
 }
 
 .popup {
@@ -74,5 +71,9 @@
 
 .Note {
   padding-left: 6rem;
+}
+
+.Note:hover {
+  background: #93918F70;
 }
 /*# sourceMappingURL=FolderList.module.css.map */

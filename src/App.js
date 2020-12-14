@@ -26,7 +26,7 @@ function App() {
             <Route exact path="/mainfolder" component={DefaultFolder} />
             <Route exact path="/mainfolder/0/:folder" component={FolderPage} />
             <Route exact path="/mainfolder/:noteid" component={NotePage} />
-            <Route exact path="/mainfolder/:folder/:noteid" component={FolderNote} />
+            <Route exact path="/mainfolder/folder?:folder/:noteid" component={FolderNote} />
           </Switch>
           </Router>
         </Provider>

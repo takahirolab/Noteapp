@@ -1,19 +1,23 @@
 import React from 'react'
-import Layout from '../layout/Layout'
 import FolderPageDetail from './FolderPage/FolderPageDetail'
-import { connect } from 'react-redux';
+//Layout
+import Layout from '../layout/Layout'
 import Contentcontainer from '../layout/ContentContainer/container'
+// Redux
+import { connect } from 'react-redux';
 
 export function FolderPage(props) {
-    const noteid = props.match.params.folder
+    // フォルダIDを取得
+    const folderid = props.match.params.folder
 
     return (
         <Layout>
-
-            {props.data.MainFolder.map(item =>
-                item.id === noteid ?
-                    item.Notefolder.length > 0 ?
-                        <FolderPageDetail noteid={noteid} /> :  <Contentcontainer><h2>データがありません。</h2> </Contentcontainer>:''
+            {/* 第二階層で作成したノートの有無を検知 */}
+            {props.data.MainFolder.map(folder => folder.id === folderid ? folder.Notefolder.length > 0 ?
+                // ノートが存在する場合　テーブルを表示する
+                <FolderPageDetail folderid={folderid} /> :
+                // ノートが存在しない場合　データないことを明示
+                <Contentcontainer><h2>データがありません。</h2> </Contentcontainer> : ''
             )}
 
         </Layout>
@@ -21,9 +25,9 @@ export function FolderPage(props) {
 }
 
 
+//Redux
 const mapStateToProps =(state) => ({
     data:state.data
 })
-
 
 export default connect(mapStateToProps)(FolderPage);
