@@ -11,7 +11,6 @@ function Home (props) {
         <Layout>
             <Contentcontainer>
                 <h1>ようこそ</h1>
-                <AddBtn/>
             </Contentcontainer>
         </Layout>
     )

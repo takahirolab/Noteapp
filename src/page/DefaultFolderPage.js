@@ -1,4 +1,5 @@
 import React from 'react'
+import { Redirect } from 'react-router-dom'
 //レイアウト
 import Layout from '../layout/Layout'
 import Contentcontainer from '../layout/ContentContainer/container'
@@ -11,10 +12,16 @@ import DefaultFolderList from './DefaultFolder/DefaultFolderList'
 export function  DefaultFolder (props) {
     return (
         <Layout>
-            {props.data.MainFolder.length > 0 ? <DefaultFolderList /> :  <Contentcontainer><h2>データがありません。</h2> </Contentcontainer>}
+            {props.data.MainFolder.length > 0 ?
+                // フォルダが存在している場合
+                <DefaultFolderList /> :
+                 // フォルダが存在してない場合
+                <Redirect to={'/'} />}
         </Layout>
     )
 }
+
+
 
 
 //Redux

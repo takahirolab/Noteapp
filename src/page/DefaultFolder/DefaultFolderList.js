@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
+
 import history from '.././../util/history/history'
 //スタイル
 import style from './DefaultFolderList.module.css'
@@ -8,6 +9,7 @@ import style from './DefaultFolderList.module.css'
 import L_DefaultFolderList from '../../layout/Table/l_DefaultFolderList'
 //redux
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom'
 
 export class DefaultFolderList extends Component {
     constructor(props) {
@@ -33,7 +35,7 @@ export class DefaultFolderList extends Component {
         return (
 
             <> {/* ノートがない場合はホームへ &&更新をかけた場合*/}
-                {NoteItemList.length === 0 ? history.push('/') :
+                {NoteItemList.length === 0 ?  <Redirect to={'/'} />:
                //* テーブルリストの表示
                 <L_DefaultFolderList>
                     {NoteItemList}

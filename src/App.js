@@ -9,7 +9,7 @@ import history from './util/history/history'
 import FolderPage from './page/FolderPage'
 import FolderNote from './page/FolderNotePage'
 
-import {BrowserRouter as Router, Route,Switch,Redirect} from 'react-router-dom';
+import{ BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 // react-redux
 import { Provider } from 'react-redux';
@@ -20,7 +20,7 @@ function App() {
     <>
       {/* <Nav/> */}
       <Provider store={store}>
-        <Router history={history}>
+        <BrowserRouter　 history={history}>
          <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/mainfolder" component={DefaultFolder} />
@@ -28,7 +28,7 @@ function App() {
             <Route exact path="/mainfolder/:noteid" component={NotePage} />
             <Route exact path="/mainfolder/folder?:folder/:noteid" component={FolderNote} />
           </Switch>
-          </Router>
+          </BrowserRouter>
         </Provider>
       </>
   );
