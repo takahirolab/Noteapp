@@ -1,5 +1,6 @@
 {
   "name": "my-app",
+
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -20,7 +21,7 @@
     "redux-thunk": "^2.3.0",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "http://username.github.io/react-pages",
+  "homepage": "http://takahirolab.github.io/Noteapp/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
