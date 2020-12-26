@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/Noteapp/static/css/main.fee0e161.chunk.css",
+    "main.js": "/Noteapp/static/js/main.c94244ed.chunk.js",
+    "main.js.map": "/Noteapp/static/js/main.c94244ed.chunk.js.map",
+    "runtime-main.js": "/Noteapp/static/js/runtime-main.5d95a47d.js",
+    "runtime-main.js.map": "/Noteapp/static/js/runtime-main.5d95a47d.js.map",
+    "static/css/2.1fbea009.chunk.css": "/Noteapp/static/css/2.1fbea009.chunk.css",
+    "static/js/2.75a3aea4.chunk.js": "/Noteapp/static/js/2.75a3aea4.chunk.js",
+    "static/js/2.75a3aea4.chunk.js.map": "/Noteapp/static/js/2.75a3aea4.chunk.js.map",
+    "index.html": "/Noteapp/index.html",
+    "static/css/2.1fbea009.chunk.css.map": "/Noteapp/static/css/2.1fbea009.chunk.css.map",
+    "static/css/main.fee0e161.chunk.css.map": "/Noteapp/static/css/main.fee0e161.chunk.css.map",
+    "static/js/2.75a3aea4.chunk.js.LICENSE.txt": "/Noteapp/static/js/2.75a3aea4.chunk.js.LICENSE.txt",
+    "static/media/Logo.dc03abb0.svg": "/Noteapp/static/media/Logo.dc03abb0.svg",
+    "static/media/logo.6ce24c58.svg": "/Noteapp/static/media/logo.6ce24c58.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5d95a47d.js",
+    "static/css/2.1fbea009.chunk.css",
+    "static/js/2.75a3aea4.chunk.js",
+    "static/css/main.fee0e161.chunk.css",
+    "static/js/main.c94244ed.chunk.js"
+  ]
+}
