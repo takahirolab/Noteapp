@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './Reboot.css'
 import './App.css';
 
+
 import Home from './page/Home'
 import DefaultFolder from './page/DefaultFolderPage'
 import NotePage from './page/NotePage'
